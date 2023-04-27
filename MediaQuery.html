@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+</head>
+
+<style>
+    /* 미디어쿼리: 특정 조건이 참인 경우 미디어쿼리 양식에 있는 속성값 적용 */
+
+    /* 미디어 쿼리 생성 */
+    /* @media screen and (조건문){
+        "조건문이 참일때 적용할 스타일"
+        선택자{
+            속성명: 속성값;
+            ...
+        }
+    } */
+    body{
+        background-color: orange;
+
+    }
+    @media screen and (max-width:500px) { /*뷰 포트 너비가 500 이하일때*/ /*orientation: landscape는 화면이 가로모드일 때를 나타냄*/
+                                                                                /*orientation: portrait 화면이 세로모드일때를 나타냄 */
+        body{
+            background-color: cornsilk;
+        }
+        
+    }
+    @media screen and (min-width:700px){
+        body{
+            background-color: rgb(54, 36, 12);
+
+        }
+
+    }
+        
+    
+
+</style>
+
+<body>
+
+    
+</body>
+</html>
