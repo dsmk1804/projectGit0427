@@ -1,0 +1,89 @@
+<!-- 미디어 쿼리를 이용한 백그라운드 및 폰트 색상 변경
+
+p태그를 사용한 사각형을 5개 만든다
+border 테두리 적용
+폰트색상 black
+백그라운드 색상 white
+그 외 설정은 자유롭게 (너비는 자동으로 100%으로 적용되므로 변경은 x)
+
+뷰포트 너비에 따라 아래처럼 속성값이 바뀌게끔 
+1st p 태그의 색상 변경
+2nd p태그의 색상 변경
+3rd p 태그의 색상 변경
+4th p태그의 색상 변경 
+5th p태그의 색상 변경
+모든 p태그의 글씨 색상 하얀색으로 변경-->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4월 27일 직접 풀어보기-사각형 변형</title>
+</head>
+<style>
+    p{
+        width: 300px;
+        height: 300px;
+        display: inline-block;
+        text-align: center;
+        background-color: white;
+        border: 3px solid black;
+        color:black;
+
+
+    }
+    /* 사각형의 색상변경(각기 변하는 시점을 달리), 글씨 색상 변경 */
+    @media screen and (min-width: 600px) {
+        p#first{
+            background-color: red;
+            color: white;
+        }
+        
+    }
+    @media screen and (min-width: 700px) {
+        p#second{
+            background-color: yellow;
+            color: white;
+
+        }
+        
+    }
+    @media screen and (min-width: 800px) {
+        p#third{
+            background-color: blue;
+            color: white;
+
+        }
+        
+    }
+    @media screen and (min-width: 900px) {
+        p#fourth{
+            background-color: green;
+            color: white;
+
+        }
+        
+    }
+    @media screen and (min-width: 1000px) {
+        p#fifth{
+            background-color: purple;
+            color: white;
+
+        }
+        
+    }
+
+</style>
+
+<body>
+    <p id="first">사각형1</p>
+    <p id="second">사각형2</p>
+    <p id="third">사각형3</p>
+    <p id="fourth">사각형4</p>
+    <p id="fifth">사각형5</p>
+
+</body>
+</html>

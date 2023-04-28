@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--viewport 메타 태그가 없으면 반응형 웹을 만들 수 없으며, CSS3를 지원하지 않는 브라우저는 사용할 수 없다.-->
+    <!-- viewport: 브라우저 차으이 크기 -->
+    <!-- width-device-width : 해당 기기의 너비에 맞춘다. -->
+    <title>반응형 웹(resposive web)</title>
+</head>
+
+<style>
+    img{
+        /* width, height, max-width, max-height, min-width, min-height */
+        /* (width: 70%;
+        img 태그의 너비를 뷰포트의 70%만큼 지정한다) */
+        max-width: 250%;
+        /* max~, min~ : 원본 사진의 크기가 최대/최소이다 */
+        /* min-width: 100%; */
+    }
+
+
+
+</style>
+
+<body>
+    <img src="삼색이.jpg">
+
+    <!-- 뷰포트 크기에 따라 다른 사진을 보여주게끔 설정 -->
+    <picture>
+        <!-- srcset: src(스크린)set(세트) - 이미지들을 2개 이상 명시하여 묶어놓는 속성 -->
+        <!--  -->
+        <img src="야통이.jpg">
+        <source srcset="야통이.jpg" media="(max-width:1000px)">
+        
+        <img src="무.jpg">
+        <source srcset="무.jpg" style="height:auto;">
+    </picture>
+    <h1>화면을 줄여보시오</h1>
+</body>
+</html>

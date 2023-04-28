@@ -1,0 +1,103 @@
+<!-- 계이름에 따라 페이지를 구성하고 전환 효과를 주세요
+(반올림, 반내림 고려 x)
+
+[기본값] -> 각 음계마다 계이름 텍스트로 적용
+background-color : 흰색
+border : 적용 - 검은색
+
+<hover>
+ 빨간색 : 도 주황색 : 레 노란색: 미
+ 초록색 : 파 파란색 : 솔 하늘색: 라 
+ 보라색: 시 빨간색: 도
+
+ <active> - hover에서의 색상 유지
+    font size 키우기
+    color : white
+
+
+-->
+
+<!-- 집가서 스타일시트 외부 css로 다시 연결하기 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>계이름 만들기</title>
+</head>
+<style>
+p{
+    background-color: white;
+    font-size: 25px;
+    display: inline-block;
+    color: black;
+    border: 3px solid black;
+    width: 100px;
+    height: 350px;
+    
+    transition: background-color 2s, font-size 2s, color 2s, width 2s, height 2s;
+    transition-delay: 1s;
+
+}
+
+p#do:hover{
+    background-color: red;
+
+}
+p#re:hover{
+    background-color: orange;
+
+}
+p#mi:hover{
+    background-color: yellow;
+
+}
+p#fa:hover{
+    background-color: green;
+
+}
+p#sol:hover{
+    background-color: blue;
+
+}
+p#ra:hover{
+    background-color: skyblue;
+    
+}
+p#si:hover{
+    background-color: purple;
+     
+}
+p#Do:hover{
+    background-color: red;
+    
+}
+
+p:active{
+    font-size: 35px;
+    color: white;
+    width: 150px;
+    height: 400px;
+}
+
+div{
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+</style>
+<body>
+    <div>
+    <h2>건반을 한번 눌러보세요~</h2>
+    <p id="do">도</p>
+    <p id="re">레</p>
+    <p id="mi">미</p>
+    <p id="fa">파</p>
+    <p id="sol">솔</p>
+    <p id="ra">라</p>
+    <p id="si">시</p>
+    <p id="Do">도</p>
+    </div>
+    
+</body>
+</html>
